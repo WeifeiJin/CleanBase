@@ -4,7 +4,7 @@ This is the official source code for **CleanBase**, a framework for detecting ma
 
 ## 🔧 Setup
 
-1. Install the environment
+1. Install the environment.
 
 ```bash
 conda create -n cleanbase python=3.10
@@ -58,21 +58,21 @@ python calc_adv_embeds.py --input_json ./results/prompt_injection/nq.json
 
 ## 🔍 Detection
 
-1. **Build the k-NN graph**
+1. **Build the k-NN graph**.
     The embeddings computed above are saved as `.npz` files. Use them as input to build the graph.
 
 ```bash
 python build_graph.py --corpus_npz <corpus_npz_path> --adv_npz <adv_npz_path>
 ```
 
-2. **Graph pruning**
+2. **Graph pruning**.
     Use the graph you just built as input, and run the following script for pruning.
 
 ```bash
 python graph_pruning.py --input_graph_path <your_graph_name.npz> --input_ids_path <your_graph_ids.npy>
 ```
 
-3. **Find cliques and detect malicious texts**
+3. **Find cliques and detect malicious texts**.
     Use the pruned graph and adversarial embeddings as input and run the following command for detection.
 
 ```bash
@@ -85,21 +85,21 @@ This script will save a detailed cliques report for later evaluation.
 
 ## 🧪 End-to-End Evaluation
 
-1. **Merge attacked database**
+1. **Merge attacked database**.
     Merge the corpus and malicious texts into a complete attacked database.
 
 ```bash
 python merge_database.py --corpus_npz <corpus_npz_path> --adv_npz <adv_npz_path>
 ```
 
-2. **Clean database**
+2. **Clean database**.
     According to the cliques report, run the following command to remove detected nodes and obtain the cleaned database.
 
 ```bash
 python clean_database.py --database_npz <your_attacked_database.npz> --cliques_json_path <your_cliques_report.json>
 ```
 
-3. **Full evaluation**
+3. **Full evaluation**.
     Run the entire evaluation pipeline to obtain ASR, Precision, and other metrics.
 
 ```bash
