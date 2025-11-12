@@ -1,4 +1,4 @@
-# CleanBase:
+# CleanBase
 
 This is the official source code for **CleanBase**, a framework for detecting malicious documents in Retrieval-Augmented Generation (RAG) systems’ knowledge database.
 
