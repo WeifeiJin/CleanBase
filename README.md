@@ -106,10 +106,3 @@ python clean_database.py --database_npz <your_attacked_database.npz> --cliques_j
 python eval_pipeline.py --database_path <your_cleaned_database.npz> --adv_ids_path <adv_npz_path>
 ```
 
-------
-
-## 🙏 Acknowledgments
-
-This project is partially built upon [PoisonedRAG](https://github.com/sleeepeer/PoisonedRAG).
- We also use the [BEIR](https://github.com/beir-cellar/beir) benchmark.
-
