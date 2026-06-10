@@ -105,3 +105,22 @@ python clean_database.py --database_npz <your_attacked_database.npz> --cliques_j
 ```bash
 python eval_pipeline.py --database_path <your_cleaned_database.npz> --adv_ids_path <adv_npz_path>
 ```
+
+------
+
+## 🙏 Acknowledgments
+
+This project is partially built upon [PoisonedRAG](https://github.com/sleeepeer/PoisonedRAG).
+We also use the [BEIR](https://github.com/beir-cellar/beir) benchmark.
+
+## 📚 Citation
+
+If you find **CleanBase** useful in your research, please consider citing our paper:
+
+```bibtex
+@article{jin2026cleanbase,
+  title   = {CleanBase: Detecting Malicious Documents in RAG Knowledge Databases},
+  author  = {Jin, Weifei and Wang, Xilong and Zou, Wei and Jia, Jinyuan and Gong, Neil},
+  journal = {arXiv preprint arXiv:2605.00460},
+  year    = {2026}
+}
